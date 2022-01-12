@@ -1,1 +1,1 @@
-# P2-StockYourself-Fronend-Amplifier
+# P2-StockYourself-Frontend-Amplifier
