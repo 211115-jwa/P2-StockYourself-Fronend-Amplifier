@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -11,15 +11,15 @@ export class LoginComponent implements OnInit {
   usernameInput:string;
   passwordInput:string;
 
-  constructor() { }
+  constructor(private userServ:UserService) { }
 
   ngOnInit(): void {
   }
 
   logIn() {
-    // this.userServ.logIn(this.usernameInput,this.passwordInput).then(resp => {
-      // this.logIn.emit();
-      //});
+     this.userServ.logIn(this.usernameInput,this.passwordInput).then(resp => {
+       this.logIn.emit();
+      });
   }
 
 }

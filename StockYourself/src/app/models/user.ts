@@ -8,7 +8,7 @@ export class User {
         public username:string,
         public password:string,
         public email:string,
-        public phoneNumber:number,
+        public phoneNumber:string,
         public role:UserRole,
         public portfolio:Portfolio
     ){ }
