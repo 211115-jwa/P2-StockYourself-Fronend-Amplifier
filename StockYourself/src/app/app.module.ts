@@ -2,21 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { LoginComponent } from './components/login/login.component';
+import { FetchService } from './services/fetch.service';
+import { YahooAPIService } from './services/yahoo-api.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UserComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
-  providers: [],
+  providers: [
+    FetchService,
+    YahooAPIService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

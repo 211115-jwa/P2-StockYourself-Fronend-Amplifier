@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
   @Output() login:EventEmitter<any> = new EventEmitter();
   usernameInput:string;
-  passwordInput:string;
+  passwordInput: string;
 
   constructor(private userServ:UserService) { }
 
@@ -18,8 +18,10 @@ export class LoginComponent implements OnInit {
 
   logIn() {
      this.userServ.logIn(this.usernameInput,this.passwordInput).then(resp => {
-       this.logIn.emit();
+       this.login.emit();
       });
   }
 
 }
+
+

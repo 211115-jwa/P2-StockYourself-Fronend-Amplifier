@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
-import { UrlService } from './url.service';
+import { FetchService } from './fetch.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,7 @@ import { UrlService } from './url.service';
 export class UserService {
   loggedInUser: User;
 
-  constructor(private url:UrlService) { }
+  constructor(private url:FetchService) { }
 
   async checkLogin() {
     let token = localStorage.getItem('Token');

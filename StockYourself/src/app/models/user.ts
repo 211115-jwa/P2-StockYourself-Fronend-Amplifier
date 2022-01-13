@@ -1,5 +1,5 @@
 import { RouterLink } from "@angular/router"
-import { UserRole } from "./user-role";
+import { UserRole } from "./userrole";
 import { Portfolio } from "./portfolio";
 
 export class User {

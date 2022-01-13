@@ -1,5 +1,5 @@
 export class Portfolio {
-    constructor(
-        public id:number
-    ) {}
+  constructor(
+      public id:number
+  ) {}
 }
