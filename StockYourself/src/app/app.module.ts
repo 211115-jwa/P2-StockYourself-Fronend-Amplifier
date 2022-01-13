@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { FetchService } from './services/fetch.service';
 import { YahooAPIService } from './services/yahoo-api.service';
 import { UserService } from './services/user.service';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
