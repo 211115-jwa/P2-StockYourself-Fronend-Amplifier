@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 export class NavComponent implements OnInit {
   loggedInUser: User;
   showLogin:false;
+  activeId: 1;
 
   constructor(private userServ:UserService) { }
 
