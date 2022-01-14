@@ -1,1 +1,6 @@
-<p>nav works!</p>
+<nav>
+
+</nav>
+<ng-container *ngIf="showLogin">
+    <app-login (login)="setup()"></app-login>
+</ng-container>
