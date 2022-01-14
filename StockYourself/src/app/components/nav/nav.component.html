@@ -1,6 +1,28 @@
-<nav>
+<div class="d-flex">
 
-</nav>
-<ng-container *ngIf="showLogin">
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    
+    <button type="button" class="btn btn-secondary">Middle</button>
+    <button type="button" class="btn btn-secondary">Right</button>
+  </div>
+
+
+  <ul ngbNav #nav="ngbNav" [(activeId)]="activeId" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <button type="button" class="btn btn-secondary" link="">Left</button>
+      <a ngbNavLink>First</a>
+      <ng-template ngbNavContent>First content</ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Second</a>
+      <ng-template ngbNavContent>Second content</ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</div>
+<!-- <pre>Active: {{ activeId }}</pre> -->
+
+<!-- <ng-container *ngIf="showLogin">
     <app-login (login)="setup()"></app-login>
-</ng-container>
+</ng-container> -->
