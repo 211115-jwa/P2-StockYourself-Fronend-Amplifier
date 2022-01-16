@@ -16,6 +16,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { StocksComponent } from './components/stocks/stocks.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
