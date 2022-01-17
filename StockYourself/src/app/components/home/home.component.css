@@ -1,0 +1,18 @@
+
+
+#top{
+  padding: 2em;
+  height: 50%vw;
+  width: 80%vw;
+  border-width: 0.2rem;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.btn{
+  height: 2em;
+  width: 7em;
+}
