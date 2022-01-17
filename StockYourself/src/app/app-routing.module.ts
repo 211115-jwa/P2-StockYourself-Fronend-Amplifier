@@ -9,16 +9,24 @@ import { StocksComponent } from './components/stocks/stocks.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'home', 
+    pathMatch: 'full'
+  },
+  {
     path: 'home', 
-  component: HomeComponent
-  },
-  {
-    path: 'login', 
-  component: LoginComponent
-  },
-  {
-    path: 'register', 
-  component: RegisterComponent
+  component: HomeComponent,
+  children: 
+    [
+      {
+        path: 'login', 
+      component: LoginComponent
+      },
+      {
+        path: 'register', 
+      component: RegisterComponent
+      }
+    ]
   },
   {
     path: 'portfolio', 
