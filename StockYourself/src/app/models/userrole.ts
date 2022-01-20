@@ -1,6 +1,6 @@
-export class UserRole {
+export class Userrole {
   constructor(
-      public id:number,
-      public name:string
-  ) {}
+    public id:number,
+    public name:string
+) {}
 }
