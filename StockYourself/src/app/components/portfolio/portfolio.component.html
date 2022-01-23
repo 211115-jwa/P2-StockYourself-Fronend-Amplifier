@@ -1,1 +1,17 @@
-<p>portfolio works!</p>
+
+<div class="portfolio" [id]="'portfolio' + portfolio.id">
+    <h3><span class="portfolioHeader">{{ portfolio.id }}</span> {{ portfolio.name }}</h3>
+    <br><br>
+    <ul> 
+        <li *ngFor="let stocks of portfolio.portfolioStocks"> 
+            <span class="stockRow">  Name: {{ stocks.name }}, Ticker: {{stocks.ticker}}, Price: {{stocks.price}}, </span> 
+        </li>
+    </ul>
+    
+     <button (click)="viewPortfolioPosts()" [id]="'view' + portfolio.id" >View Posts</button>
+     <br>
+     <div class="postsByPortfolioId" *ngIf="!posts===null">
+        <app-post *ngFor="let eachPost of posts" [post]="eachPost"></app-post>
+    </div>
+    
+</div>
