@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="container" id="top">
+  <img src="../../../assets/stockMarketConcept.jpeg">
+  
+</div>
+<hr>
+<div id="bottom">
+  <span>
+    <a class="btn btn-info nav-link"role="button" *ngIf="!loggedInUser; else user" (click)="showLogin=!showLogin" id="login" routerLink="login" >Show Login </a>
+    <ng-template #user>
+      {{ loggedInUser.username }}
+      <a (click)="logOut()" class="btn btn-info" id="logout" role="button" >Logout </a>
+    </ng-template>
+  </span>
+</div>
+
+<!-- <a class="btn btn-info nav-link" id="register" routerLink="register" role="button" style="margin: 2px;">Register </a> -->
+<router-outlet></router-outlet>

@@ -1,1 +1,39 @@
-<p>nav works!</p>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #043457;">
+  <a class="navbar-brand" href="#">StockYourself</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="btn btn-outline-info nav-link" routerLink="home" role="button" style="margin: 2px;">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-info nav-link" routerLink="stocks" role="button" style="margin: 2px;">Stocks</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-info nav-link" routerLink="posts" role="button" style="margin: 2px;">Posts</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="!loggedInUser; else user" class="btn btn-outline-info nav-link disabled" routerLink="my-portfolio" role="button" aria-disabled="true" style="margin: 2px;"> My Portfolio</a>
+          <ng-template #user>
+            <a class="btn btn-outline-info nav-link" routerLink="portfolios" role="button" style="margin: 2px;">Portfolio</a>
+          </ng-template>
+      </li>
+    </ul>
+  </div>
+</nav>
+   
+<!-- <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
+
+<!-- <button *ngIf="!loggedInUser; else user" (click)="showLogin=!showLogin">Log In</button>
+        <ng-template #user>
+            {{ loggedInUser.fullName }}&nbsp;&nbsp;&nbsp;
+            <button (click)="logOut()">Log Out</button>
+        </ng-template> -->
+
+<!-- <ng-container *ngIf="showLogin">
+    <app-login (login)="setup()"></app-login>
+</ng-container> -->

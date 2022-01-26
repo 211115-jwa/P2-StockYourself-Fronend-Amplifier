@@ -1,0 +1,7 @@
+<main>
+    <span class="posts"></span>
+    <h2>User Posts</h2>
+    <div>
+        <app-post *ngFor="let eachPost of posts" [post]="eachPost"></app-post>
+    </div>
+</main>
