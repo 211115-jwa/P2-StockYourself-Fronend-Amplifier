@@ -8,25 +8,25 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  loggedInUser: User;
-  showLogin:false;
-  activeId: 1;
-
-  constructor(private userServ:UserService) { }
+  loggedInUser:User;
+  showLogin:boolean = false;
+  
+  constructor(private us:UserService) { }
 
   ngOnInit(): void {
     this.setup();
   }
 
   setup() {
-    this.userServ.checkLogin().then(resp => {
-      this.loggedInUser = this.userServ.loggedInUser;
-      this.showLogin=false;
+    this.us.checkLogin().then(Response => {
+      this.loggedInUser = this.us.loggedInUser;
+      this.showLogin = false;
     });
   }
 
   logOut() {
-    this.userServ.logOut();
+    this.us.logOut();
     this.loggedInUser = null;
   }
+
 }
