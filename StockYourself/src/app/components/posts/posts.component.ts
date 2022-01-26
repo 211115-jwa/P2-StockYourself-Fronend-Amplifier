@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/models/post';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-posts',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+   posts: Post[];
 
-  constructor() { }
+  constructor(private postServ: PostService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise <void> {
+    this.posts = await this.postServ.getAllPosts();
   }
 
 }
