@@ -1,4 +1,4 @@
-# Project 2 StockYourself Backend -- Team Amplifier
+# Project 2 StockYourself Frontend -- Team Amplifier
 
 --------------
 
