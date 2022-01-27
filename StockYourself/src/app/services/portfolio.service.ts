@@ -15,6 +15,9 @@ export class PortfolioService {
 
     if(resp.status===200) {
       return await resp.json();
-    }
+    } else {
+      return null;
+  }
+
   }
 }
