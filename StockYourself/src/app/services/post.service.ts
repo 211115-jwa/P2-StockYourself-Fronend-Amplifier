@@ -21,6 +21,17 @@ export class PostService {
 
   }
 
+  async createPost(createdPost: Post): Promise<void> {
+   
+    let resp = await fetch(this.fetch.url + 'posts/');
+    if (resp.status === 200) {
+      return await resp.json();
+    }
+
+
+  }
+
+
   async getPostsByPortfolioId(portfolioId: number): Promise<Post[]> {
 
     let resp = await fetch(this.fetch.url + "posts/" + portfolioId)
