@@ -7,7 +7,7 @@ import { FetchService } from './fetch.service';
   providedIn: 'root'
 })
 export class PostService {
- 
+  post: Post[]
 
   constructor(private fetch:FetchService) { }
 
@@ -17,7 +17,9 @@ export class PostService {
     if (resp.status === 200) {
       return await resp.json();
     }
-
+    else {
+      return this.post;
+  }
 
   }
 
@@ -28,7 +30,7 @@ export class PostService {
     if (resp.ok) {
       return await resp.json();
     } else {
-        
+        return this.post;
     }
   }
 
@@ -39,8 +41,8 @@ export class PostService {
     if (resp.ok) {
       return await resp.json();
     } else {
-        
-    }
+      return this.post;
+  }
   }
 
   async updatePostByCreator(post: Post, creator: User): Promise<Post> {
@@ -50,8 +52,8 @@ export class PostService {
     if (resp.ok) {
       return await resp.json();
     } else {
-        
-    }
+      return null;
+  }
 
   }
 
