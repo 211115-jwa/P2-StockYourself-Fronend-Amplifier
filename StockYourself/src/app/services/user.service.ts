@@ -7,6 +7,8 @@ import { FetchService } from './fetch.service';
 })
 export class UserService {
   loggedInUser: User;
+  authHeaders = {'Content-type':'application/json','Token':''};
+  regHeaders = {'Content-type':'application/json'};
 
   constructor(private url:FetchService) { }
 
@@ -21,12 +23,14 @@ export class UserService {
   }
 
   async logIn(username:string,password:string): Promise<void> {
-    let credintials = {
+    let credentials = {
       'username':username,
       'password':password
+      
     };
-
-    let resp = await fetch(this.url.url + 'users/auth', {method:'POST',body:JSON.stringify(credintials)});
+    console.log('username');
+    let resp = await fetch(this.url.url + 'users/auth', {method:'POST',body:JSON.stringify(credentials),
+    headers:this.regHeaders});
 
     if(resp.status===200) {
       let token = await resp.json();

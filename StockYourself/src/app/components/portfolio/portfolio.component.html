@@ -9,6 +9,11 @@
     </ul>
     
      <button (click)="viewPortfolioPosts()" [id]="'view' + portfolio.id" >View Posts</button>
+     <button (click)="seePostTemplate()" [id]="createPost" >Create Post</button>
+     <br>
+     <div class="createPostFormat" *ngIf="seePostFormat == true">
+        <app-createpost></app-createpost>
+    </div>
      <br>
      <div class="postsByPortfolioId" *ngIf="!posts===null">
         <app-post *ngFor="let eachPost of posts" [post]="eachPost"></app-post>
