@@ -1,5 +1,6 @@
 import { AppComponent } from './app.component';
 
+import { CreatepostComponent } from './components/createpost/createpost.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MyPortfolioComponent } from './components/my-portfolio/my-portfolio.component';
@@ -20,7 +21,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FetchService } from './services/fetch.service';
 import { UserService } from './services/user.service';
-import { CreatepostComponent } from './components/createpost/createpost.component';
 
 
 @NgModule({
