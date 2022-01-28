@@ -20,6 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FetchService } from './services/fetch.service';
 import { UserService } from './services/user.service';
+import { CreatepostComponent } from './components/createpost/createpost.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UserService } from './services/user.service';
     PostComponent,
     PostsComponent,
     RegisterComponent,
-    StocksComponent
+    StocksComponent,
+    CreatepostComponent
   ],
 
   imports: [
