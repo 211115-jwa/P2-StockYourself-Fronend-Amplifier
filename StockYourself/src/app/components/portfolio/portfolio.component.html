@@ -4,12 +4,12 @@
     <br><br>
     <ul> 
         <li *ngFor="let stocks of portfolio.portfolioStocks"> 
-            <span class="stockRow">  Name: {{ stocks.name }}, Ticker: {{stocks.ticker}}, Price: {{stocks.price}}, </span> 
+            <span class="stockRow">  Name: {{ stocks.name }} </span> 
         </li>
     </ul>
     
      <button (click)="viewPortfolioPosts()" [id]="'view' + portfolio.id" >View Posts</button>
-     <button (click)="seePostTemplate()" [id]="createPost" >Create Post</button>
+     <!-- <button (click)="seePostTemplate()" [id]="createPost" >Create Post</button> -->
      <br>
      <div class="createPostFormat" *ngIf="seePostFormat == true">
         <app-createpost></app-createpost>
