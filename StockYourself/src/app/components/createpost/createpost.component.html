@@ -1,0 +1,18 @@
+<div>
+    <form>
+        <label for="postTitle"> Post Title </label>
+        <input input="text" name="postTitle" id="postTitle" placeholder="Title of Post">
+        <br>
+        <label for="postContent"> Post Body </label>
+        <textarea rows="10" cols="30" name="postContent" id="postContent" placeholder="Enter Comment Here">
+
+
+
+        </textarea>
+        <button (click)="createPost()" name="createPost" [id]="createPost" >Create Post</button>
+        <div class = "messageString" *ngIf= "messageString != null">
+            <span>{{message}}</span>
+        </div>
+
+    </form>
+</div>
