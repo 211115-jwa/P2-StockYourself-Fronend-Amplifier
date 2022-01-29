@@ -18,18 +18,15 @@ const routes: Routes = [
   },
   {
     path: 'home', 
-  component: HomeComponent,
-  children: 
-    [
-      {
-        path: 'login', 
-      component: LoginComponent
-      },
-      {
-        path: 'register', 
-      component: RegisterComponent
-      }
-    ]
+  component: HomeComponent
+  },
+  {
+    path: 'login', 
+  component: LoginComponent
+  },
+  {
+    path: 'register', 
+  component: RegisterComponent
   },
   {
     path: 'portfolio', 

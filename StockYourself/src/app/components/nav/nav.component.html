@@ -5,35 +5,34 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="btn btn-outline-info nav-link" routerLink="home" id="home" role="button" style="margin: 2px;">Home <span class="sr-only"></span></a>
+        <a class="btn btn-outline-info nav-link" routerLink="home" id="home" role="button" style="margin: 2px;">Home </a>
       </li>
       <li class="nav-item">
-        <a class="btn btn-outline-info nav-link" routerLink="stocks" role="button" style="margin: 2px;">Stocks</a>
+        <a class="btn btn-outline-info nav-link" routerLink="stocks" id="stocks" role="button" style="margin: 2px;">Stocks</a>
       </li>
       <li class="nav-item">
-        <a class="btn btn-outline-info nav-link" routerLink="posts" role="button" style="margin: 2px;">Posts</a>
+        <a class="btn btn-outline-info nav-link" routerLink="posts" id="posts" role="button" style="margin: 2px;">Posts</a>
       </li>
       <li class="nav-item">
-        <a *ngIf="!loggedInUser; else user" class="btn btn-outline-info nav-link disabled" routerLink="my-portfolio" role="button" aria-disabled="true" style="margin: 2px;"> My Portfolio</a>
-          <ng-template #user>
-            <a class="btn btn-outline-info nav-link" routerLink="portfolios" role="button" style="margin: 2px;">Portfolio</a>
+        <a *ngIf="!loggedInUser; else user1" class="btn btn-outline-info nav-link disabled" routerLink="my-portfolio" role="button" aria-disabled="true" style="margin: 2px;"> My Portfolio</a>
+          <ng-template #user1>
+            <a class="btn btn-outline-info nav-link" routerLink="portfolios" id="portfolios" role="button" style="margin: 2px;">Portfolio</a>
           </ng-template>
       </li>
     </ul>
+    
+    <form class="form-inline my-2 my-lg-0">
+      <span id="user">
+        <a class="btn btn-outline-info nav-link"role="button" *ngIf="!loggedInUser; else user2" (click)="showLogin=!showLogin" id="login" routerLink="login" >Show Login </a>
+        <ng-template #user2>
+          {{ loggedInUser.username }}
+          <a class="btn btn-outline-info " (click)="logOut()" id="logout" role="button" style="margin: 2px;" >Log Out </a>
+        </ng-template>
+      </span>
+    </form>
+  
   </div>
 </nav>
    
-<!-- <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
-<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
-
-<!-- <button *ngIf="!loggedInUser; else user" (click)="showLogin=!showLogin">Log In</button>
-        <ng-template #user>
-            {{ loggedInUser.fullName }}&nbsp;&nbsp;&nbsp;
-            <button (click)="logOut()">Log Out</button>
-        </ng-template> -->
-
-<!-- <ng-container *ngIf="showLogin">
-    <app-login (login)="setup()"></app-login>
-</ng-container> -->
