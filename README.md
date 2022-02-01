@@ -1,4 +1,4 @@
-# Project 2 StockYourself Backend -- Team Amplifier
+# Project 2 StockYourself Frontend -- Team Amplifier
 
 The goal of this project is to use the Agile project management philosophy, Scrum methodology.  By working in a small team we were able to practice git workflows utilizing the following frameworks: PostgreSQL, Spring Boot, Angular, Spring testing, and Selenium.
 
