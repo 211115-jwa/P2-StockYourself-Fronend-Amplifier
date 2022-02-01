@@ -44,72 +44,13 @@ To-do list:
 
 ## Getting Started
 
-1. Go to your Documents folder
+To download Angular2+, click on the guide.
 
-**If You Have a Windows Computer**
+Windows.
+https://ccbill.com/kb/install-angular-on-windows
 
-2. Open a new Command Prompt in your Documents folder like this. <br><br> ![cmd](./cmdPic.jpeg)
-
-**If You Have a Mac**
-
-2. Open a new terminal in your Documents folder like this. <br><br> ![terminal](./terminalAtFolder.png)
-
-**Joint Instructions**
-
-3. Go to this project's GitHub [page](https://github.com/211115-jwa/P2-StockYourself-backend-Amplifier) for the backend and click on the green code button to clone it. <br><br> ![Green-Button](./here.png)
-4. Most of you want HTTPS
-5. Click the double boxes to copy this command. <br><br> ![copy](./Copy.png)
-
-**If You Have a Windows Computer**
-
-6. Go back to your command prompt that you opened in step 4.
-
-**If You Have a Mac**
-
-6. Go back to your terminal that you opened in step 4.
-
-**Joint Instructions**
-
-7. Type
-```
-git clone [paste url here]
-```
-- Now we check if you have Java and if you do, which version.
-8. In your command prompt/terminal type:
-```
-javac -version
-```
-9. It should look something like this. <br><br> ![javaVersion](./javaVer.png)
-10. If there is no return value or the version number is below 8 go [here](https://www3.ntu.edu.sg/home/ehchua/programming/howto/JDK_Howto.html). Follow the instructions for your operating system.
-11. Next you will install PostgreSQL from [here](https://www.postgresqltutorial.com/install-postgresql/).  Follow the instructions for your operating system.
-12. Install Eclipse from [here](https://www.eclipse.org/downloads/packages/installer)
-13. Install DBeaver from [here](https://dbeaver.io/download/)
-- In step 9. you cloned the repository into your new folder TRMS.  Now that you have Java, Postgres, Eclipse, and VS Code installed on your system, you are going to populate your new SQL database and run the program.
-14. Open Eclipse IDE for Enterprise Developers
-15. Go to File -> Import -> Maven -> Existing Maven Projects
-16. Browse for trms-back
-17. Finish
-- The SQL scripts are in database
-18. Open DBeaver
-19. Go to File -> New
-20. Select DBeaver -> Database Connection
-21. Select the PostgreSQL Blue Elephant
-22. Leave everything as it is
-23. Check the connection, if not connecting, troubleshoot.
-24. Finish
-25. Make a application.properties in src/main/resources that looks similar to this: <br><br> ![copy](./props.png) 
-26. Make a Schema called P2
-27. Right click on P2, go to SQL Editor -> Open SQL Console
-28. Copy the Script in DDL.sql into the SQL Console and run it.
-29. Repeat step 29. then Copy the DML.sql into the new console and run it.
-30. Expand src/main/java -> com.revature.stockYourself -> StockYourselfApplication.java
-31. Right click on StockYourselfApplication.java
-32. Select Run as -> Spring Boot Application 
-33. Repeat steps 1 and 2
-34. Go to this project's GitHub [page](https://github.com/211115-jwa/P2-StockYourself-Frontend-Amplifier) for the frontend and click on the green code button to clone it. <br><br> ![Green-Button](./here.png)
-35. Repeat steps 4 - 8
-36. 
-
+Mac.
+https://www.zeolearn.com/magazine/setup-angular-mac
 
 
 ## License
